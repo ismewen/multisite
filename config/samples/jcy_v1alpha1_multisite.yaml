@@ -1,0 +1,12 @@
+apiVersion: jcy.ismewen.com/v1alpha1
+kind: MultiSite
+metadata:
+  name: multisite-sample
+  namespace: wordpress-4560
+spec:
+  # Add fields here
+  podname: wordpress-4560-cms-0
+  containername: wordpress
+  nickname: et
+  ip: 172.107.26.5
+  status: Init

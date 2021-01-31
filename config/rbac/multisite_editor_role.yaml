@@ -1,0 +1,24 @@
+# permissions for end users to edit multisites.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: multisite-editor-role
+rules:
+- apiGroups:
+  - jcy.ismewen.com
+  resources:
+  - multisites
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - jcy.ismewen.com
+  resources:
+  - multisites/status
+  verbs:
+  - get

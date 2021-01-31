@@ -1,0 +1,28 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - jcy.ismewen.com
+  resources:
+  - multisites
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - jcy.ismewen.com
+  resources:
+  - multisites/status
+  verbs:
+  - get
+  - patch
+  - update
